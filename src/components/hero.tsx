@@ -1,5 +1,5 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { HeroProps } from "@/types";
 
 const Hero: React.FC<HeroProps> = ({ imageSrc }) => {
