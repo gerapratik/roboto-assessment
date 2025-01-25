@@ -7,7 +7,7 @@ export const Footer: React.FC<FooterProps> = ({ contactInfo, columns }) => {
   return (
     <footer className="bg-gray-100 py-16">
       <div className="max-w-[1400px] mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 text-center md:text-left">
           {/* Contact Info */}
           <div>
             <p className="text-[#9C9C9D]">{contactInfo.phone}</p>
@@ -52,7 +52,7 @@ export const Footer: React.FC<FooterProps> = ({ contactInfo, columns }) => {
         </div>
 
         {/* Navigation columns */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {columns.map((column, colIndex) => (
             <div key={colIndex}>
               {column.categories.map((category, catIndex) => (
