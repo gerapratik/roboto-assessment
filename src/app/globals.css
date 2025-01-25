@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: 'Galaxie Copernicus';
+    src: url('/public/fonts/GalaxieCopernicus-Book.eot');
+    src: url('/public/fonts/GalaxieCopernicus-Book.eot?#iefix') format('embedded-opentype'),
+         url('/public/fonts/GalaxieCopernicus-Book.woff') format('woff'),
+         url('/public/fonts/GalaxieCopernicus-Book.ttf') format('truetype'),
+         url('/public/fonts/GalaxieCopernicus-Book.svg#e38a3208d0813a382ab28eed4449d484') format('svg');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Galaxie Copernicus';
+    src: url('/public/fonts/GalaxieCopernicus-BookItalic.eot');
+    src: url('/public/fonts/GalaxieCopernicus-BookItalic.eot?#iefix') format('embedded-opentype'),
+         url('/public/fonts/GalaxieCopernicus-BookItalic.woff') format('woff'),
+         url('/public/fonts/GalaxieCopernicus-BookItalic.ttf') format('truetype'),
+         url('/public/fonts/GalaxieCopernicus-BookItalic.svg#10541365a7c67b174fb9a30eddeb4d45') format('svg');
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -9,13 +35,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #0a0a0a;
+    --background: #ededed;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Galaxie Copernicus', serif;  /* Updated this line */
 }

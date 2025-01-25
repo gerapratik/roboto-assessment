@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        // copernicus: ['var(--font-galaxie)', 'serif'],
+        'galaxie': ['Galaxie Copernicus'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
