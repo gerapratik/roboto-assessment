@@ -16,8 +16,19 @@ import furniture3 from "../images/furniture3.png";
 import furniture4 from "../images/furniture4.png";
 import furniture5 from "../images/furniture5.png";
 
+interface Category {
+    title: string;
+    description: string;
+    image: string | StaticImageData;
+    primaryCTA: {
+        label: string;
+    };
+    secondaryCTA?: {
+        label: string;
+    };
+    background?: string;
+}
 
-// First define interfaces for our product data
 interface Product {
     image: string | StaticImageData
     title: string;
@@ -31,7 +42,7 @@ interface ProductGrid {
     products: Product[];
 }
 
-// Extend the PageData interface
+
 interface PageData {
     hero: {
         title: string;
@@ -39,53 +50,12 @@ interface PageData {
         cta: string;
         image: string | StaticImageData
     };
-    category_1: {
-        title: string;
-        description: string;
-        image: string | StaticImageData
-        primaryCTA: {
-            label: string;
-        };
-        secondaryCTA: {
-            label: string;
-        };
-    };
-    category_2: {
-        title: string;
-        description: string;
-        image: string | StaticImageData
-        primaryCTA: {
-            label: string;
-        };
-      
-    };
-    category_3: {
-        title: string;
-        description: string;
-        image: string | StaticImageData
-        primaryCTA: {
-            label: string;
-        };
-        
-    };
-    category_4: {
-        title: string;
-        description: string;
-        image: string | StaticImageData
-        primaryCTA: {
-            label: string;
-        };
-       
-    };
-    category_5: {
-        title: string;
-        description: string;
-        image: string | StaticImageData
-        primaryCTA: {
-            label: string;
-        };
-       
-    };
+   
+    category_1: Category;
+    category_2: Category;
+    category_3: Category;
+    category_4: Category;
+    category_5: Category;
     productGrids: {
         lighting: ProductGrid;
         stories: ProductGrid;
@@ -146,6 +116,7 @@ export const pageData: PageData = {
         primaryCTA: {
             label: "Discover More",
         },
+        background:  "#DFDAD7"
        
     },
     productGrids: {
